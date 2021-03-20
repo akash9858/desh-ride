@@ -85,13 +85,13 @@ const SignIn = () => {
                     newUser &&
                     <>
                         <label htmlFor="inputName" className="visually-hidden">User Name</label>
-                        <input type="text" onBlur={handleBlur} name="name" className="form-control" placeholder="User Name" required />
+                        <input type="text" onChange={handleBlur} name="name" className="form-control" placeholder="User Name" required />
                     </>
                 }
                 <label htmlFor="inputEmail" className="visually-hidden">Email address</label>
-                <input type="email" onBlur={handleBlur} name="email" className="form-control" placeholder="Email address" required autoFocus />
+                <input type="email" onChange={handleBlur} name="email" className="form-control" placeholder="Email address" required autoFocus />
                 <label htmlFor="inputPassword" className="visually-hidden">Password</label>
-                <input type="password" onBlur={handleBlur} name="password" className="form-control" placeholder="Password" required />
+                <input type="password" onChange={handleBlur} name="password" className="form-control" placeholder="Password" required />
                 <button className="w-100 btn btn-lg btn-outline-success mb-2" type="submit">{newUser ? 'Create an account' : 'Signin'}</button>
                 <p>{newUser ? 'Already have an account' : 'Don’t have an account'} ?
                  <span onClick={() => setNewUser(!newUser)} className="text-warning" style={{ cursor: 'pointer' }}>

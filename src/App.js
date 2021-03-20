@@ -12,7 +12,6 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Components/Home/Home';
-import Login from './Components/Login/Login';
 import { createContext, useState } from 'react';
 import FinalDestination from './Components/FinalDestination/FinalDestination';
 export const UserContext = createContext();
@@ -23,17 +22,9 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router >
         <Header />
-
-
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route path="/login">
-            <Login ></Login>
           </Route>
           <Route path="/signin">
             <SignIn></SignIn>

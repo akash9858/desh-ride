@@ -17,7 +17,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/destination">Destination</Nav.Link>
                         <Nav.Link href="#link">Blog</Nav.Link>
                     </Nav>
-                    <Button variant="success" as={Link} to="/signin">{loggedInUser.userName ? loggedInUser.userName : "Login"}</Button>
+                    <Button variant="success" as={Link} to="/signin">{loggedInUser.userName || loggedInUser.email ? loggedInUser.userName || loggedInUser.email : "Login"}</Button>
                 </Navbar.Collapse>
             </Navbar>
         </div>

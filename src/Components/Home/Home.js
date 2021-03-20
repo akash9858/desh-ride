@@ -14,7 +14,7 @@ const Home = () => {
             .then(data => setCard(data))
     }, [])
     return (
-        <div className="container background" >
+        <div className="container App background" >
             {
                 card.map(card => <Ride key={card.id} card={card}> </Ride>)
             }

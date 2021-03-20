@@ -76,9 +76,10 @@ const SignIn = () => {
             setUser(newUserInfo);
         }
     }
+    document.title = "SignUp $ Sign In"
 
     return (
-        <div className="form-signin mt-5">
+        <div div className="form-signin mt-5" >
             <form onSubmit={handleSubmit}>
                 <h1 className="h3 mb-3 fw-normal">{newUser ? 'Create an account' : 'Signin'}</h1>
                 {
@@ -102,14 +103,11 @@ const SignIn = () => {
                 <button onClick={handleGoogleSignIn} className="w-100 btn btn-lg btn-outline-success mb-2" type="submit">Connect with Google</button>
 
             </form>
-            {
-                console.log(user)
-            }
             <p style={{ color: 'red' }}>{user.error}</p>
             {
                 user.success && <p style={{ color: 'green' }}>User {newUser ? 'created' : 'Logged In'} successfully</p>
             }
-        </div>
+        </div >
     );
 };
 

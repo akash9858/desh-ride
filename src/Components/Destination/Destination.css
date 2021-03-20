@@ -4,7 +4,8 @@
   text-align: center;
 }
 .image {
-  width: 70%;
+  margin-left: 50px;
+  text-align: center;
 }
 .text {
 }
@@ -19,5 +20,9 @@
   img {
     margin-top: 10px;
     width: 5%;
+  }
+  .image {
+    margin-left: 50px;
+    text-align: center;
   }
 }

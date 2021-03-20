@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Ride = (props) => {
     const { name, image } = props.card;
+    document.title = "Desh Ride"
     return (
 
         <Card as={Link} to="/destination" className="cardStyle shadow-sm p-2 bg-body rounded container " style={{ width: '14rem' }}>

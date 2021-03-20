@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Ride from '../Ride/Ride';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import './Home.css'
 
@@ -13,8 +14,12 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setCard(data))
     }, [])
+    document.title = "Desh Ride"
     return (
         <div className="container App background" >
+            {
+                card.length === 0 && <CircularProgress color="secondary" />
+            }
             {
                 card.map(card => <Ride key={card.id} card={card}> </Ride>)
             }

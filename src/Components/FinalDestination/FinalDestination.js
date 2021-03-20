@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import map from '../Image/Map.png'
 import './FinalDestination.css';
-
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Location from '../Map/Location';
 
 const FinalDestination = () => {
   const [ride, setRide] = useState([]);
@@ -13,8 +14,12 @@ const FinalDestination = () => {
   }, [])
   // console.log("pp", ride[0].name);
   const { id, name, price, image } = ride;
+  document.title = "Final Destination"
   return (
     <div className=" container main-content">
+      {
+        ride.length === 0 && <CircularProgress color="secondary" />
+      }
 
       <div className="text" >
         <div className='divStyle'>
@@ -32,8 +37,8 @@ const FinalDestination = () => {
         </div>
 
       </div>
-      <div>
-        <img className="image" src={map} alt="" />
+      <div className="image">
+        <Location></Location>
       </div>
     </div>
   );

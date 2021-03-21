@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import map from '../Image/Map.png'
 import './FinalDestination.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Location from '../Map/Location';
@@ -9,30 +8,39 @@ const FinalDestination = () => {
   const [ride, setRide] = useState([]);
 
   useEffect(() => {
-    setRide(rideData)
+    setRide(rideData[0])
   }, [])
-  // console.log("pp", ride[0].name);
   const { name, quantity, price, image } = ride;
-  document.title = "Final Destination"
+
+  document.name = "Final Destination"
   return (
     <div className=" container main-content">
       {
         ride.length === 0 && <CircularProgress color="secondary" />
       }
-
+      <p> name: {name}</p>
       <div className="text" >
         <div className='divStyle'>
           <h4> Mirpur</h4>
           <h4> Gulshan </h4>
         </div>
         <div className="bike">
-          <p><img className="images" src={image} alt="" /><span style={{ marginLeft: '20px' }}> {name}</span> <span style={{ marginLeft: '20px' }}> {quantity}</span> <span style={{ marginLeft: '20px' }}> {price}</span></p>
+          <img className="images" src={image} alt="" />
+          <span style={{ marginLeft: '20px' }}> {name}</span>
+          <span style={{ marginLeft: '20px' }}> {price}</span>
+          <span style={{ marginLeft: '20px' }}> {quantity}</span>
         </div>
         <div className="bike">
-          <p><img className="images" src={image} alt="" /><span style={{ marginLeft: '20px' }}> {name}</span> <span style={{ marginLeft: '20px' }}> {quantity}</span> <span style={{ marginLeft: '20px' }}> {price}</span></p>
+          <img className="images" src={image} alt="" />
+          <span style={{ marginLeft: '20px' }}> {name}</span>
+          <span style={{ marginLeft: '20px' }}> {price}</span>
+          <span style={{ marginLeft: '20px' }}> {quantity}</span>
         </div>
         <div className="bike">
-          <p><img className="images" src={image} alt="" /><span style={{ marginLeft: '20px' }}> {name}</span> <span style={{ marginLeft: '20px' }}> {quantity}</span> <span style={{ marginLeft: '20px' }}> {price}</span></p>
+          <img className="images" src={image} alt="" />
+          <span style={{ marginLeft: '20px' }}> {name}</span>
+          <span style={{ marginLeft: '20px' }}> {price}</span>
+          <span style={{ marginLeft: '20px' }}> {quantity}</span>
         </div>
 
       </div>

@@ -2,7 +2,6 @@ import { Button } from 'react-bootstrap';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import map from '../Image/Map.png'
 import './Destination.css'
 import Location from '../Map/Location';
 

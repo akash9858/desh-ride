@@ -92,7 +92,7 @@ const SignIn = () => {
                 <label htmlFor="inputEmail" className="visually-hidden">Email address</label>
                 <input type="email" onChange={handleBlur} name="email" className="form-control" placeholder="Email address" required autoFocus />
                 <label htmlFor="inputPassword" className="visually-hidden">Password</label>
-                <input type="password" onChange={handleBlur} name="password" className="form-control" placeholder="Password" required />
+                <input type="password" onChange={handleBlur} name="password" className="form-control" placeholder="Password must need 1 num $ 5 characters" required />
                 <button className="w-100 btn btn-lg btn-outline-success mb-2" type="submit">{newUser ? 'Create an account' : 'Signin'}</button>
                 <p>{newUser ? 'Already have an account' : 'Don’t have an account'} ?
                  <span onClick={() => setNewUser(!newUser)} className="text-warning" style={{ cursor: 'pointer' }}>

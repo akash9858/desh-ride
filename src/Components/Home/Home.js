@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Ride from '../Ride/Ride';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import rideData from '../Data/Data';
 
 import './Home.css'
 
@@ -10,9 +11,7 @@ const Home = () => {
     const [card, setCard] = useState([]);
 
     useEffect(() => {
-        fetch(`https://api.mocki.io/v1/bb675702/rides`)
-            .then(res => res.json())
-            .then(data => setCard(data))
+        setCard(rideData)
     }, [])
     document.title = "Desh Ride"
     return (

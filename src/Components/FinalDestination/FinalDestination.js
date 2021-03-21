@@ -18,7 +18,6 @@ const FinalDestination = () => {
       {
         ride.length === 0 && <CircularProgress color="secondary" />
       }
-      <p> name: {name}</p>
       <div className="text" >
         <div className='divStyle'>
           <h4> Mirpur</h4>
